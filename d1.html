@@ -1,0 +1,320 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Alphabet Puzzle</title>
+        <link rel="stylesheet" type="text/css" href="d1.css" />
+        <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="jquery.drag-drop.plugin.js"></script>
+<script>
+            $(function () {
+                // First example, A-F.
+                $("#source1>div").dragdrop();
+
+                // Second example, G-L.
+                $("#source2").dragdrop({
+                    makeClone: true,
+                    sourceHide: true,
+                    dragClass: "whileDragging",
+                    canDrag: function ($src, event) {
+                        $src = $(event.target);
+                        return $src.hasClass("not") ? null : $src;
+                    },
+                    canDrop: function ($dst) {
+                        return $dst.attr("id") == "destination" && $dst.children().size() < 2;
+                    },
+                });
+
+                // Third example, M-R.
+                $("#source3>div").dragdrop({
+                    makeClone: true,
+                    sourceClass: "pendingDrop",
+                    dropClass: "highlight",
+                    container: $('.content'),
+                    didDrop: function ($src, $dst) {
+                        if ($dst.attr("id") != "destination")
+                            $dst = $dst.parents("#destination");
+                        var currentText = $dst.text();
+                        currentText += $src.text();
+                        $dst.text(currentText);
+                    }
+                });
+
+            });
+        </script>
+  <script>
+  $( function() {
+    $( "ul.droptrue" ).sortable({
+      connectWith: "ul"
+    });
+ 
+    $( "ul.dropfalse" ).sortable({
+      connectWith: "ul",
+      dropOnEmpty: false
+    });
+ 
+    $( "#sortable1, #sortable2, #sortable3" ).disableSelection();
+  } );
+  </script>
+<body>
+    <div id="collage">
+        <h2>Aplhabet Puzzle</h2>
+        <hr />
+        <div id="playPanel" style="padding:5px;display:none;">
+            <h3 id="imgTitle"></h3> <hr />
+            <div style="display:inline-block; margin:auto; width:95%; vertical-align:top;">
+                <ul id="sortable" class="sortable"></ul>
+                <div id="actualImageBox">
+                    <div id="stepBox">
+                        <div>Steps:</div><div class="stepCount">0</div>
+                    </div>
+                    <div id="timeBox">
+                        Time Taken: <span id="timerPanel"></span> secs
+                    </div>
+                    <img id="actualImage" />
+                    <div>Re-arrange to create a picture like this.</div>
+                    <div>
+                        <button id="btnRule" type="button" class="btn" onclick="rules();">Rules</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gameOver" style="display:none;">
+            <div style="background-color: #fc9e9e; padding: 5px 10px 20px 10px; text-align: center; ">
+                <h2 style="text-align:center">Game Over!!</h2>
+                Congratulations!! <br /> You have completed this picture.
+                <br />
+                Steps: <span class="stepCount">0</span> steps.
+                <br />
+                Time Taken: <span class="timeCount">0</span> seconds<br />
+                <div>
+                    <button type="button" onclick="window.location.reload(true);">Play Again</button>
+                </div>
+            </div>
+        </div>
+        <script>
+
+   $( function() {
+    $( "#draggable" ).draggable({ axis: "x" });
+    $( "#draggable1" ).draggable({ axis: "x" });   
+     } );
+        
+  
+  $( function() {
+  $( "#1" ).draggable({ axis: "y" });
+  $( "#2" ).draggable({ axis: "y" });
+  $( "#3" ).draggable({ axis: "y" });
+  $( "#4" ).draggable({ axis: "y" });
+  $( "#5" ).draggable({ axis: "y" });
+  $( "#6" ).draggable({ axis: "y" });
+  $( "#7" ).draggable({ axis: "y" });
+  $( "#8" ).draggable({ axis: "y" });
+  $( "#9" ).draggable({ axis: "y" });
+  $( "#10" ).draggable({ axis: "y" });
+  } );
+  </script>    
+	
+	<div class="timer" data-seconds-left=65></div>
+	<script>
+  $(function(){
+    $('.timer').startTimer();
+  });
+</script>
+<div id="timer">
+	Your Time Starts Now:secs
+</div>
+<div class="content">
+            <p class="question">1. Which is our National Flower?</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div> 
+            <button id="firstButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">2. How many colors are there in our National Flag?</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="secondButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">3. What is the top color in a rainbow?</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">4. How many colors are in a rainbow?</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">5. How many sides does a triangle have?</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">6. How many days are there in a fortnight?</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">7. Which planet in our Solar System is known for having a ring?</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">8. How many days are there in June?</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">9. What galaxy is Earth located in?</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">10. Thirsty people need..?</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">11. Name a yellow fruit.</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">12. What is the color of the grass?</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">13. A place to see alot of Animals!</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">14. What is the opposite of dark?</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">15. A Shape with three sides is?</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">16. Which our National Bird</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">17. Which our National Bird</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">18. Which our National Bird</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">19. Which our National Bird</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">20. Which our National Bird</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">21. Which our National Bird</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">22. Which our National Bird</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">23. Which our National Bird</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">24. Which our National Bird</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            <p class="question">25. Which our National Bird</p>
+            <input type="textfield" name="t1" value=""/>
+            <div id="destination" class="textfield">
+            </div>
+            <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
+            
+            <div id="source3" class="source boxes">
+                <div>A</div>
+                <div>B</div>
+                <div>C</div>
+                <div>D</div>
+                <div>E</div>
+                <div>F</div>
+            </div>
+            <div id="source3" class="source boxes">
+                <div>G</div>
+                <div>H</div>
+                <div>I</div>
+                <div>J</div>
+                <div>K</div>
+                <div>L</div>
+            </div>
+            <div id="source3" class="source boxes">
+                <div>M</div>
+                <div>N</div>
+                <div>O</div>
+                <div>P</div>
+                <div>Q</div>
+                <div>R</div>
+            </div>
+            <div id="source3" class="source boxes">
+                <div>S</div>
+                <div>T</div>
+                <div>U</div>
+                <div>V</div>
+                <div>W</div>
+                <div>X</div>
+            </div>
+            <div id="source3" class="source boxes">
+                <div>Y</div>
+                <div>Z</div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "GOLD") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#secondButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var secondAns = myDivObj.innerHTML;
+                    secondAns = (secondAns.trim) ? secondAns.trim() : secondAns.replace(/^\s+/, '');
+                    console.log(secondAns);
+                    if (secondAns == "CAMEL") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+            });
+
+
+        </script>	
+    </body>	
+	
+</html>
