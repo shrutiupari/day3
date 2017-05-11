@@ -43,20 +43,6 @@
 
             });
         </script>
-  <script>
-  $( function() {
-    $( "ul.droptrue" ).sortable({
-      connectWith: "ul"
-    });
- 
-    $( "ul.dropfalse" ).sortable({
-      connectWith: "ul",
-      dropOnEmpty: false
-    });
- 
-    $( "#sortable1, #sortable2, #sortable3" ).disableSelection();
-  } );
-  </script>
 <body>
     <div id="collage">
         <h2>Aplhabet Puzzle</h2>
@@ -83,40 +69,17 @@
         <div id="gameOver" style="display:none;">
             <div style="background-color: #fc9e9e; padding: 5px 10px 20px 10px; text-align: center; ">
                 <h2 style="text-align:center">Game Over!!</h2>
-                Congratulations!! <br /> You have completed this picture.
+                Congratulations!! <br /> You have completed this puzzle.
                 <br />
                 Steps: <span class="stepCount">0</span> steps.
                 <br />
                 Time Taken: <span class="timeCount">0</span> seconds<br />
-                <div>
-                    <button type="button" onclick="window.location.reload(true);">Play Again</button>
-                </div>
             </div>
         </div>
-        <script>
+    
+        <div class="timer" data-seconds-left=65></div>
 
-   $( function() {
-    $( "#draggable" ).draggable({ axis: "x" });
-    $( "#draggable1" ).draggable({ axis: "x" });   
-     } );
-        
-  
-  $( function() {
-  $( "#1" ).draggable({ axis: "y" });
-  $( "#2" ).draggable({ axis: "y" });
-  $( "#3" ).draggable({ axis: "y" });
-  $( "#4" ).draggable({ axis: "y" });
-  $( "#5" ).draggable({ axis: "y" });
-  $( "#6" ).draggable({ axis: "y" });
-  $( "#7" ).draggable({ axis: "y" });
-  $( "#8" ).draggable({ axis: "y" });
-  $( "#9" ).draggable({ axis: "y" });
-  $( "#10" ).draggable({ axis: "y" });
-  } );
-  </script>    
-	
-	<div class="timer" data-seconds-left=65></div>
-	<script>
+<script>
   $(function(){
     $('.timer').startTimer();
   });
@@ -127,131 +90,131 @@
 <div class="content">
             <p class="question">1. Which is our National Flower?</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div> 
             <button id="firstButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">2. How many colors are there in our National Flag?</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="secondButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">3. What is the top color in a rainbow?</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">4. How many colors are in a rainbow?</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">5. How many sides does a triangle have?</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">6. How many days are there in a fortnight?</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">7. Which planet in our Solar System is known for having a ring?</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">8. How many days are there in June?</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="tdrop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">9. What galaxy is Earth located in?</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">10. Thirsty people need..?</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">11. Name a yellow fruit.</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">12. What is the color of the grass?</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">13. A place to see alot of Animals!</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">14. What is the opposite of dark?</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">15. A Shape with three sides is?</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">16. Which our National Bird</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">17. Which our National Bird</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">18. Which our National Bird</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">19. Which our National Bird</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">20. Which our National Bird</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">21. Which our National Bird</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">22. Which our National Bird</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">23. Which our National Bird</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">24. Which our National Bird</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             <p class="question">25. Which our National Bird</p>
             <input type="textfield" name="t1" value=""/>
-            <div id="destination" class="textfield">
+            <div id="destination" class="drop boxes">
             </div>
             <button id="thirdButton" type="submit" form="form1" value="Submit">Click Me!</button>
             
-            <div id="source3" class="source boxes">
+            <div id="source3" class="source boxes" float:right>
                 <div>A</div>
                 <div>B</div>
                 <div>C</div>
@@ -294,7 +257,7 @@
                     myDivObj = document.getElementById("destination");
                     var ans = myDivObj.innerHTML;
                     ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
-                    if (ans == "GOLD") {
+                    if (ans == "LOTUS") {
                         alert("Correct Answer");
                     } else {
                         alert("Wrong Answer");
@@ -305,12 +268,254 @@
                     var secondAns = myDivObj.innerHTML;
                     secondAns = (secondAns.trim) ? secondAns.trim() : secondAns.replace(/^\s+/, '');
                     console.log(secondAns);
-                    if (secondAns == "CAMEL") {
+                    if (secondAns == "THREE") {
                         alert("Correct Answer");
                     } else {
                         alert("Wrong Answer");
                     }
                 });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "VIOLET") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "SEVEN") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "THREE") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "FIFTEEN") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "SATURN") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "THIRTY") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "MILKYWAY") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "WATER") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "MANGO") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "GREEN") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "ZOO") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "LIGHT") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "TRIANGLE") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "PEACOCK") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "LOTUS") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "LOTUS") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "LOTUS") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "LOTUS") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "LOTUS") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "LOTUS") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "LOTUS") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "LOTUS") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "LOTUS") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                $('#firstButton').click(function () {
+                    myDivObj = document.getElementById("destination");
+                    var ans = myDivObj.innerHTML;
+                    ans = (ans.trim) ? ans.trim() : ans.replace(/^\s+/, '');
+                    if (ans == "LOTUS") {
+                        alert("Correct Answer");
+                    } else {
+                        alert("Wrong Answer");
+                    }
+                });
+                
             });
 
 
